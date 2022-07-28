@@ -1,0 +1,8 @@
+- name: to check server availability
+  wait_for:
+      timeout: 2
+      delay: 3
+  register: server_output
+
+- debug:
+    var: server_output.stdout_lines 
